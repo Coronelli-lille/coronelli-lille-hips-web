@@ -14,7 +14,7 @@
 <body>
     <div id="aladin-lite-div"></div>
     <script>
-        // Création du globe
+        // Création du globe interactif
         var aladin = A.aladin('#aladin-lite-div', {
             survey: 'P/DSS2/color',
             fov: 60,
@@ -23,11 +23,11 @@
         });
 
 ```
-    // Ajouter ton HiPS Coronelli
-    aladin.addHiPS({
+    // Charger le HiPS Coronelli comme couche
+    aladin.addSurvey({
         name: 'HiPS Coronelli',
         url: 'https://Coronelli-lille.github.io/coronelli-lille-hips-web/',
-        format: 'fits',
+        format: 'fits',  // Remplace par 'png' si tes tuiles sont en PNG
         color: 'white'
     });
 </script>
@@ -35,4 +35,3 @@
 
 </body>
 </html>
-
