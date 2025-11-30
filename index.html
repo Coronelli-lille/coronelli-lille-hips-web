@@ -16,7 +16,7 @@
     <script>
         // Création du globe
         var aladin = A.aladin('#aladin-lite-div', {
-            survey: 'P/DSS2/color', // survey par défaut si tu veux
+            survey: 'P/DSS2/color',
             fov: 60,
             target: '0 0',
             showReticle: false
@@ -24,14 +24,15 @@
 
 ```
     // Ajouter ton HiPS Coronelli
-    var hips = A.HiPS('#aladin-lite-div', {
-        url: 'https://ton-utilisateur.github.io/coronelli-lille-hips-web/',
+    aladin.addHiPS({
         name: 'HiPS Coronelli',
+        url: 'https://Coronelli-lille.github.io/coronelli-lille-hips-web/',
+        format: 'fits',
         color: 'white'
     });
-    aladin.addHips(hips);
 </script>
 ```
 
 </body>
 </html>
+
